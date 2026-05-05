@@ -31,7 +31,11 @@
             audio.play().catch(err => {
                 console.log("Audio Gagal:",err);
             });
-            
+            window.addEventListener("pagehide", 
+            function () {
+            audio.pause();
+             audio.currentTime = 0;
+            });
         
         const btn2 = 
         document.getElementById("btn2");
