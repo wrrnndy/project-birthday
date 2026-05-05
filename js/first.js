@@ -78,9 +78,3 @@
    document.getElementById('btn3').addEventListener('click', () => {
        showScene('scene3', 'scene4');
    });
-
-            window.addEventListener("pagehide", 
-            function () {
-            audio.pause();
-            audio.currentTime = 0;
-            });
