@@ -1,0 +1,133 @@
+:root {
+
+    --pastel-blue: #aec6cf;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 2s ease;
+}
+
+.scene {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.active {
+    display: flex;
+    animation: fadeIn 2s forwards;
+}
+
+/* ANIMASI UMUM */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+}
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* STYLING TOMBOL */
+button {
+    background-color: var(--pastel-blue);
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    max-width: 90%;
+    font-size: 14px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+button:hover {
+    transform: scale(1.05);
+    background-color: #9cb2ba;
+}
+
+#scene2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#btn2 {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+#btn2.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+
+
+ /* SCENE 1: GELAP */
+ #scene1 {
+     background-color: black; color: white;
+     overflow: hidden;
+    }
+ #scene3 {
+    background-color: #1e1e2f;
+    overflow: hidden;    
+    }
+ #scene4 {
+    overflow-y: auto;
+    }
+ #text1, #text2 { margin: 10px; font-weight: normal; }
+
+
+#btn3 {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+
+#btn3.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
