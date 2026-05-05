@@ -31,11 +31,6 @@
             audio.play().catch(err => {
                 console.log("Audio Gagal:",err);
             });
-            window.addEventListener("pagehide", 
-            function () {
-            audio.pause();
-             audio.currentTime = 0;
-            });
         
         const btn2 = 
         document.getElementById("btn2");
@@ -79,8 +74,13 @@
             }, 10000);
         });
 
-// pindah scene 3 ke scene 4
-document.getElementById('btn3').addEventListener('click', () => {
-    showScene('scene3', 'scene4');
-});
-       
+   // pindah scene 3 ke scene 4
+   document.getElementById('btn3').addEventListener('click', () => {
+       showScene('scene3', 'scene4');
+   });
+
+            window.addEventListener("pagehide", 
+            function () {
+            audio.pause();
+            audio.currentTime = 0;
+            });
