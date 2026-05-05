@@ -112,7 +112,7 @@ button:hover {
 
 #btn3 {
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%) translateY(20px);
     opacity: 0;
